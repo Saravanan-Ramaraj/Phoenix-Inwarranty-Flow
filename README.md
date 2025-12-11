@@ -9,7 +9,7 @@ The latest report is mailed to the stakeholders using gmail SMTP.
 
  ## Tech Stack ##
  1. Postman
- 2. Node js 24v
+ 2. Node js 22v
  3. Newman
  4. Newman-Reporter-Htmlextra
  5. Github Actions
@@ -17,3 +17,30 @@ The latest report is mailed to the stakeholders using gmail SMTP.
  7. Github Pages
  8. CSV for Data Driven Testing
  9. AWS-EC2 instance for Self hosted github runner
+
+## Github Pages ##
+You can directly view the latest test report of the Postman Test at the Github Page Link : ttps://saravanan-ramaraj.github.io/Phoenix-Inwarranty-Flow/
+
+## How to run the Project? ##
+You can run the project on your local system for that:
+1. Clone the Project on Local System: https://github.com/Saravanan-Ramaraj/Phoenix-Inwarranty-Flow.git
+2. Install Nodejs and NPM from https://nodejs.org/en
+3. Install Newman using npm install -g newman
+4. Install Newman-reporter-htmlextra using npm install -g newman-reporter-htmlextra
+5. Run the Newman Command:
+             newman run 'Inwarranty-flow-collection.postman_collection.json' \
+             -e QA.postman_environment.json \
+             -d testdata.csv \
+             -r cli,htmlextra \
+             --reporter-htmlextra-export ./newman/index.html
+
+## HTML Report ##
+The report will be created in the Newman folder
+![Postman Report](https://github.com/Saravanan-Ramaraj/Phoenix-Inwarranty-Flow/blob/static-content/Newman.report.png)
+
+
+
+
+
+
+
