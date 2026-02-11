@@ -4,10 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-  schedule:
+  #schedule:
    # - cron : 30 02 * * * # 8 am IST Every day
    # - cron : 00 14 * * * # 7.30 pm IST Every day
-    - cron : 00 06 10 * 1 # 7.30 pm IST Monday to Friday
+   # - cron : 00 06 10 * 1 # 7.30 pm IST Monday to Friday
 
 jobs:
   run-postman-tests:
